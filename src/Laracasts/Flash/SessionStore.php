@@ -11,4 +11,12 @@ interface SessionStore
      * @param array  $data
      */
     public function flash($name, $data);
+
+    /**
+     * Put a message to the session.
+     *
+     * @param string $name
+     * @param array  $data
+     */
+    public function put($name, $data);
 }

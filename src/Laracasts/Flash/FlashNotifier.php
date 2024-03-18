@@ -159,7 +159,7 @@ class FlashNotifier
      */
     protected function flash()
     {
-        $this->session->flash('flash_notification', $this->messages);
+        $this->session->put('flash_notification', $this->messages);
 
         return $this;
     }
