@@ -1,11 +1,15 @@
 {
-    "name": "laracasts/flash",
+    "name": "mintalicious/laracasts-flash",
     "description": "Easy flash notifications",
     "license": "MIT",
     "authors": [
         {
             "name": "Jeffrey Way",
             "email": "jeffrey@laracasts.com"
+        },
+        {
+            "name": "Erik Schindler",
+            "email": "erik@web4ward.de"
         }
     ],
     "require": {
