@@ -1,3 +1,35 @@
+<style type="text/css">
+    .alert {
+        margin-top: 0;
+    }
+    .overlay-alert {
+        display: none;
+        /* font-size: small; */
+        font-size: 16px;
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+        width: 100%;
+        border: 2px solid lightgray;
+        border-width: 0 0 1px 4px;
+        margin: 0;
+        /* margin-bottom: -4em; */
+        padding: .25em;
+        z-index: 1050;
+    }
+    
+    .alert-critical {
+        background-color: pink;
+        color: rgb(73, 20, 73);
+        border-color: rgb(73, 20, 73);
+    }
+    
+    .overlay-alert.alert-dismissible .btn-close {
+        padding: .75rem 1rem;
+        font-size: small;
+    }
+</style>
+
 @foreach (session('flash_notification', collect())->toArray() as $message)
     @if ($message['overlay'])
         @include('flash::overlay', ['message' => $message])
