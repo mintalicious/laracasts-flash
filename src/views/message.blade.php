@@ -17,20 +17,20 @@
         padding: .25em;
         z-index: 1050;
     }
-    
+
     .alert-critical {
         background-color: pink;
         color: rgb(73, 20, 73);
         border-color: rgb(73, 20, 73);
     }
-    
+
     .overlay-alert.alert-dismissible .btn-close {
         padding: .75rem 1rem;
         font-size: small;
     }
 </style>
 
-@foreach (session('flash_notification', collect())->toArray() as $message)
+@foreach (session('flash_notification', []) as $message)
     @if ($message['overlay'])
         @include('flash::overlay', ['message' => $message])
     @else
